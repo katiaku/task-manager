@@ -11,6 +11,7 @@ import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
+import Square from './components/pure/square';
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
       {/* Gestión de eventos */}
       {/* <Father></Father> */}
       {/* Ejemplos de Renderizado condicional */}
-      <OptionalRender></OptionalRender>
+      {/* <OptionalRender></OptionalRender> */}
+      <Square></Square>
       {/* PROYECTO FINAL */}
       {/* <TaskListComponent></TaskListComponent> */}
     </div>
