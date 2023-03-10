@@ -12,6 +12,14 @@ cd task_manager
 npm start
 ```
 
+Install dependencies
+```
+npm install bootstrap
+npm install bootstrap-icons
+npm install node-sass
+npm install axios
+```
+
 Open [http://localhost:3000](http://localhost:3000) to view the project in your browser.
 
 ## Learn More
