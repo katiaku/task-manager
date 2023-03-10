@@ -3,28 +3,49 @@ import React, { useState } from 'react';
 
 const Square = () => {
 
-    let red = 0;
-    let green = 0;
-    let blue = 0;
+    const [color, setColor] = useState('#000000');
+    const [manageInterval, setManageInterval] = useState(0);
+    const [doubleClick, setDoubleClick] = useState(0);
 
-    const [color, setColor] = React.useState(`rgb(${red}, ${green}, ${blue})`);
+    const getColor = () => Math.floor(Math.random() * 256);
 
-    const styles = {
-        height: '255px', 
-        width: '255px', 
-        backgroundColor: color
-    };
+    const getHex = (red, green, blue) => {
+        return (
+            '#' + [red, green, blue].map((c) => {
+                const hex = c.toString(16);
+                return hex.length === 1 ? '0' + hex : hex;
+            })
+            .join('')
+        )
+    }
 
-    const generarValor = () => {
-        return (Math.random() * 255).toFixed(0)
+    const generateHex = () => {
+        const rgb = {
+            r: getColor(),
+            g: getColor(),
+            b: getColor()
+        };
+        return setColor(getHex(rgb.r, rgb.g, rgb.b))
+    }
+
+    const onChangeColor = () => {
+        return setManageInterval(setInterval(generateHex, 500))
+    }
+
+    const onStopChangeColor = () => {
+        return clearInterval(manageInterval)
+    }
+
+    const onClickChangeColor = () => {
+        return clearInterval(manageInterval)
     }
 
     return (
         <div 
-            style={styles}
-            onMouseEnter={() => setColor(`rgb(${generarValor}, ${generarValor}, ${generarValor})`)}
-            onMouseLeave={() => setColor({onMouseEnter})}
-            onDoubleClick={() => setColor()}
+            style={{width: '225px', height: '255px', backgroundColor: color}}
+            onMouseOver={onChangeColor}
+            onMouseLeave={onStopChangeColor}
+            onDoubleClick={onClickChangeColor}
         >
         </div>
     );
