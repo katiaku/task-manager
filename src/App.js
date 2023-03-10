@@ -42,9 +42,9 @@ function App() {
       {/* <Father></Father> */}
       {/* Ejemplos de Renderizado condicional */}
       {/* <OptionalRender></OptionalRender> */}
-      <Square></Square>
+      {/* <Square></Square> */}
       {/* PROYECTO FINAL */}
-      {/* <TaskListComponent></TaskListComponent> */}
+      <TaskListComponent></TaskListComponent>
     </div>
   );
 }
