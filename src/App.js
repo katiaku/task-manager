@@ -13,6 +13,7 @@ import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
 import Square from './components/pure/square';
 import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
       {/* <OptionalRender></OptionalRender> */}
       {/* <Square></Square> */}
       {/* Ejemplos de uso de Formik y Yup */}
-      <LoginFormik></LoginFormik>
+      {/* <LoginFormik></LoginFormik> */}
+      <RegisterFormik></RegisterFormik>
       {/* PROYECTO FINAL */}
       {/* <TaskListComponent></TaskListComponent> */}
     </div>
