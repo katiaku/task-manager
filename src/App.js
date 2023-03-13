@@ -12,6 +12,7 @@ import GreetingStyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
 import Square from './components/pure/square';
+import LoginFormik from './components/pure/forms/loginFormik';
 
 function App() {
   return (
@@ -43,8 +44,10 @@ function App() {
       {/* Ejemplos de Renderizado condicional */}
       {/* <OptionalRender></OptionalRender> */}
       {/* <Square></Square> */}
+      {/* Ejemplos de uso de Formik y Yup */}
+      <LoginFormik></LoginFormik>
       {/* PROYECTO FINAL */}
-      <TaskListComponent></TaskListComponent>
+      {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }

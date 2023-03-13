@@ -14,10 +14,11 @@ npm start
 
 Install dependencies
 ```
-npm install bootstrap
-npm install bootstrap-icons
-npm install node-sass
-npm install axios
+npm i bootstrap 
+npm i bootstrap-icons
+npm i node-sass
+npm i axios
+npm i formik yup
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the project in your browser.
