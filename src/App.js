@@ -14,6 +14,7 @@ import OptionalRender from './components/pure/optionalRender';
 import Square from './components/pure/square';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
+import TaskFormik from './components/pure/forms/taskFormik';
 
 function App() {
   return (
@@ -47,7 +48,8 @@ function App() {
       {/* <Square></Square> */}
       {/* Ejemplos de uso de Formik y Yup */}
       {/* <LoginFormik></LoginFormik> */}
-      <RegisterFormik></RegisterFormik>
+      {/* <RegisterFormik></RegisterFormik> */}
+      <TaskFormik></TaskFormik>
       {/* PROYECTO FINAL */}
       {/* <TaskListComponent></TaskListComponent> */}
     </div>
