@@ -2,17 +2,23 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { LEVELS } from '../../../models/levels.enum';
-import { Task } from '../../../models/task.class';
+import useList from '../../../hooks/useList';
 
 
 const TaskFormik = () => {
 
-    let task = new Task();
-
+    const defaultTask = {
+        name: 'Formik',
+        description: 'Formulario con Formik',
+        level: LEVELS.URGENT,
+        done: false,
+    };
+    
     const initialValues = {
         name: '',
         description: '',
-        level: LEVELS.NORMAL
+        level: LEVELS.NORMAL,
+        done: false
     }
 
     const taskSchema = Yup.object().shape(
@@ -31,20 +37,20 @@ const TaskFormik = () => {
         }
     )
 
-    const submit = (values) => {
-        alert('Register a task')
-    }
+    const tasks = useList([defaultTask]);
 
     return (
         <div>
-            <h4>Task Formik</h4>
+            <h4>Task List Formik</h4>
             <Formik
                 initialValues={initialValues}
                 validationSchema = {taskSchema}
-                // ** onSubmit Event
-                onSubmit={async (values) => {
-                    await new Promise((r) => setTimeout(r, 1000));
-                    alert(JSON.stringify(values, null, 2));
+                onSubmit={(values, actions) => {
+                    setTimeout(() => {
+                        tasks.push(values);
+                        actions.resetForm({});
+                        actions.setSubmitting(false);
+                    }, 500);
                 }}
             >
             {({ values, 
@@ -73,13 +79,29 @@ const TaskFormik = () => {
                                 )
                             }
 
-                            <button type="submit">Register Task</button>
-                            {isSubmitting ? (<p>Uploading your task...</p>) : null}
+                            <label htmlFor="level">Task Level</label>
+                            <Field as="select" name="level">
+                                <option value={LEVELS.NORMAL}>Normal</option>
+                                <option value={LEVELS.URGENT}>Urgent</option>
+                                <option value={LEVELS.BLOCKING}>Blocking</option>
+                            </Field>
 
+                            <button type="submit">Submit</button>
                         </Form>
                     )
             }
             </Formik>
+            {tasks.isEmpty() ? (
+                <p>Task List is Empty</p>
+            ) : (
+                tasks.value.map((task, index) => (
+                    <li key={index} style={{ display: 'flex', alignItems: 'center' }}>
+                        <input type="checkbox" onClick={() => tasks.remove(index)} checked={false} />
+                        <p style={{ fontWeight: 'bold', marginRight: '5px' }}>{task.name}</p>
+                        <p>{task.description}</p>
+                    </li>
+                ))
+            )}
         </div>
     );
 }
