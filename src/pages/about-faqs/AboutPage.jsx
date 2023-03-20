@@ -27,7 +27,7 @@ const AboutPage = () => {
             <div>
                 <button onClick={ () => navigate('/')}>Go To Home</button>
                 <button onClick={ goBack }>Go Back</button>
-                <button onClick={ goForward }>Go Back</button>
+                <button onClick={ goForward }>Go Forward</button>
             </div>
         </div>
     );

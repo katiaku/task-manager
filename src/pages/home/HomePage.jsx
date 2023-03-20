@@ -12,10 +12,25 @@ const HomePage = () => {
         history.push(path);
     }
 
+    const navigateProps = (path) => {
+        history.push({
+            pathname: path,
+            search: '?online=true', // Query Params
+            state: {
+                online: true
+            }
+        });
+    }
+
     return (
         <div>
             <h1>Home Page</h1>
-            <button onClick={() => navigate('/profile')}>Go To Profile</button>
+            <button onClick={() => navigateProps('/online-state')}>
+                Go To Page With State / Query Params
+            </button>
+            <button onClick={() => navigate('/profile')}>
+                Go To Profile
+            </button>
         </div>
     );
 }
