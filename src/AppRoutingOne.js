@@ -49,7 +49,7 @@ function AppRoutingOne() {
           <Routes>
             <Route exact path='/' element={ <HomePage /> } />
             <Route exact path='/online-state' element={ <StatePage /> } />
-            <Route path='/login' element={ LoginPage }>
+            <Route path='/login' element={ <LoginPage /> }>
               {
                 logged ? 
                 () => {
@@ -58,7 +58,7 @@ function AppRoutingOne() {
                 } 
                 : 
                 () => {
-                  return (<LoginPage />)
+                  return (<LoginPage></LoginPage>)
                 }
               }
             </Route>
@@ -74,7 +74,7 @@ function AppRoutingOne() {
                 }
               }
             </Route>
-            <Route path='/tasks' element={ <TaskPage />} />
+            <Route path='/tasks' element={ <TaskPage /> } />
             <Route 
             exact 
             path='/task/:id'>
