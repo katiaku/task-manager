@@ -20,6 +20,9 @@ npm i node-sass
 npm i axios
 npm i formik yup
 npm i react-router-dom
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+npm i clsx
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the project in your browser.
