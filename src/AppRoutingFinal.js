@@ -2,7 +2,9 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 
 import LoginPage from './pages/auth/LoginPage';
 import DashBoardPage from './pages/dashboard/DashBoard';
+import TaskPage from './pages/tasks/TaskPage';
 import NotFoundPage from './pages/404/NotFoundPage';
+import RegisterPage from './pages/auth/RegisterPage';
 
 function AppRoutingFinal() {
 
@@ -29,6 +31,18 @@ function AppRoutingFinal() {
             <DashBoardPage /> 
             : 
             <Navigate from='/' to='/login' />
+          }
+        </Route>
+        <Route exact path='/register' element={ <RegisterPage /> } />
+        <Route exact path='/tasks' element={ <TaskPage /> }>
+          {
+            loggedIn ? 
+            <TaskPage /> 
+            : 
+            () => {
+              alert('You must be logged in. Redirecting to home...')
+              return (<Navigate to='/login' replace />)
+            }
           }
         </Route>
         <Route element={ <NotFoundPage />} />
