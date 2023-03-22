@@ -23,6 +23,7 @@ npm i react-router-dom
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material
 npm i clsx
+npm i rxjs
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the project in your browser.

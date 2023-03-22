@@ -15,20 +15,27 @@ import Square from './components/pure/square';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
 import TaskFormik from './components/pure/forms/taskFormik';
+import AsyncExample from './components/pure/AsyncExample';
+import ObservableExample from './components/pure/ObservableExample';
 
 function App() {
   return (
     <div className="App">
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
+
         {/* Componente propio Greeting.jsx */}
         {/* <Greeting name="Martín"></Greeting> */}
+
         {/* Componente de ejemplo funcional */}
         {/* <GreetingF name="Martín"></GreetingF> */}
+
         {/* Componente de listado de tareas */}
         {/* <TaskListComponent></TaskListComponent> */}
+
         {/* Componente de contactos */}
         {/* <Contact></Contact> */}
+
         {/* Ejemplos de uso de HOOKS */}
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
@@ -41,15 +48,23 @@ function App() {
         </Ejemplo4> */}
         {/* <GreetingStyled name="Martín"></GreetingStyled> */}
       {/* </header> */}
+
       {/* Gestión de eventos */}
       {/* <Father></Father> */}
+
       {/* Ejemplos de Renderizado condicional */}
       {/* <OptionalRender></OptionalRender> */}
       {/* <Square></Square> */}
+
       {/* Ejemplos de uso de Formik y Yup */}
       {/* <LoginFormik></LoginFormik> */}
       {/* <RegisterFormik></RegisterFormik> */}
-      <TaskFormik></TaskFormik>
+      {/* <TaskFormik></TaskFormik> */}
+
+      {/* Ejemplos de procesos asíncronos */}
+      {/* <AsyncExample></AsyncExample> */}
+      <ObservableExample></ObservableExample>
+
       {/* PROYECTO FINAL */}
       {/* <TaskListComponent></TaskListComponent> */}
     </div>
