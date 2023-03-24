@@ -1,50 +1,78 @@
 import React, { useState, useEffect } from 'react';
-import { getRandomJoke } from '../../services/axiosService';
+import axios from 'axios';
+import ThumbDownIcon from '@mui/icons-material/ThumbDown';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import { Card, Button } from '@mui/material/';
+
+const baseURL = 'https://api.chucknorris.io/jokes/random';
 
 const RandomJoke = () => {
     
-    const [joke, setJoke] = useState(null);
+    const [joke, setJoke] = useState();
+    const [positiveCount, setPositiveCount] = useState(0);
+    const [negativeCount, setNegativeCount] = useState(0);
 
-    useEffect(() => {
-        obtainJoke()
-    }, []);
+    useEffect(() => {});
 
-    const obtainJoke = () => {
-        getRandomJoke()
+    const refreshQuote = () => {
+        axios
+            .get(`${baseURL}`)
             .then((response) => {
-                if(response.status === 200){
-                    setJoke(response.data.results)
-                }
+                setJoke(response.data);
             })
             .catch((error) => {
-                alert(`Something went wrong: ${error}`);
+                console.log(error);
             })
     } 
 
-    const [countThumbsUp, setCountThumbsUp] = useState(0);
-
-    const addThumbsUp = () => {
-        setCountThumbsUp(prevCountThumbsUp => prevCountThumbsUp + 1)
-    }
-
-    const [countThumbsDown, setCountThumbsDown] = useState(0);
-
-    const addThumbsDown = () => {
-        setCountThumbsDown(prevCountThumbsDown => prevCountThumbsDown + 1)
+    const onCount = (setCounter, counter) => {
+        setCounter(counter + 1);
+        refreshQuote();
     }
 
     return (
-        <div>
-            <h2>Chuck Norrise sends you this joke!</h2>
-            <p>{joke.value}</p>
-            <h3>Get a new joke from Chuck</h3>
-            <button onClick={obtainJoke}>Random Joke</button>
-            <button onClick={addThumbsUp}>Thumbs Up!</button>
-            <h4>Funny jokes: {countThumbsUp}</h4>
-            <button onClick={addThumbsDown}>Thumbs Down!</button>
-            <h4>Not so funny jokes: {countThumbsDown}</h4>
+        <div 
+            style={{
+                width: '100vw',
+                height: '100vh',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}
+        >
+            {joke ? (
+                <Card
+                    sx={{
+                        width: 400,
+                        height: 400,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        gap: '10px',
+                        padding: '20px'
+                    }}
+                    variant="outlined"
+                >
+                    <img alt="Chuck Norris" src={joke.icon_url} />
+                    {joke.value}
+                    <div style={{display: 'flex'}}>
+                        <div style={{ display: 'flex', flexDirection: 'column', margin: '5px', alignItems: 'center' }}>
+                            <ThumbUpIcon color="success" onClick={() => onCount(setPositiveCount, positiveCount)} />
+                            {positiveCount}
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', margin: '5px', alignItems: 'center' }}>
+                            {' '}
+                            <ThumbDownIcon color="error" onClick={() => onCount(setNegativeCount, negativeCount)} />
+                            {negativeCount}
+                        </div>
+                    </div>
+                </Card>
+            ) : (
+                <Button onClick={refreshQuote}>Get a Joke!</Button>
+            )}
         </div>
-    )
-}
+    );
+};
 
 export default RandomJoke;
