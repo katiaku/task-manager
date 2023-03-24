@@ -7,3 +7,11 @@ export function getRandomUser() {
         }
     }); // https://randomuser.me/api/
 }
+
+export function getRandomJoke() {
+    return APIRequest.get('/', {
+        validateStatus: function (status) {
+            return status < 500;
+        }
+    });
+}
