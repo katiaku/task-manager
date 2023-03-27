@@ -1,4 +1,6 @@
-# This project was built for OpenBootcamp React Course 
+# Task Manager React App
+
+This project was built for OpenBootcamp React Course 
 
 ## Getting Started
 
@@ -14,16 +16,16 @@ npm start
 
 Install dependencies
 ```
-npm i bootstrap 
-npm i bootstrap-icons
-npm i node-sass
-npm i axios
-npm i formik yup
-npm i react-router-dom
+npm install bootstrap 
+npm install bootstrap-icons
+npm install node-sass
+npm install axios
+npm install formik yup
+npm install react-router-dom
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material
-npm i clsx
-npm i rxjs
+npm install clsx
+npm install rxjs
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the project in your browser.
