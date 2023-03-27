@@ -20,6 +20,7 @@ import ObservableExample from './components/pure/ObservableExample';
 import FetchExample from './components/pure/FetchExample';
 import AxiosExample from './components/pure/AxiosExample';
 import RandomJoke from './components/pure/RandomJoke';
+import AxiosCRUDExample from './components/pure/AxiosCRUDExample';
 
 function App() {
   return (
@@ -69,7 +70,8 @@ function App() {
       {/* <ObservableExample></ObservableExample> */}
       {/* <FetchExample></FetchExample> */}
       {/* <AxiosExample></AxiosExample> */}
-      <RandomJoke></RandomJoke>
+      {/* <RandomJoke></RandomJoke> */}
+      <AxiosCRUDExample></AxiosCRUDExample>
 
       {/* PROYECTO FINAL */}
       {/* <TaskListComponent></TaskListComponent> */}
