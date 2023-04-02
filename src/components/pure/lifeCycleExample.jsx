@@ -9,38 +9,35 @@ import PropTypes from 'prop-types'
 class LifeCycleExample extends Component {
     constructor(props) {
         super(props)
-        console.log('CONSTRUCTOR: Cuando se instancia el componente')
+        console.log('Constructor')
     }
 
     componentWillMount() {
-        console.log('WillMount: Antes del montaje del componente')
+        console.log('WillMount')
     }
 
     componentDidMount() {
-        console.log('DidMount: Justo al acabar el montaje del componente antes de pintarlo')
+        console.log('DidMount')
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('WillReceiveProps: Si va a recibir nuevas props')
+        console.log('WillReceiveProps')
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        /**
-         * Controlar si el componente debe o no actualizarse
-         */
         // return true / false
     }
 
     componentWillUpdate(nextProps, nextState) {
-        console.log('WillUpdate: Justo antes de actualizarse')
+        console.log('WillUpdate')
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log('DidUpdate: Justo después de actualizarse')
+        console.log('DidUpdate')
     }
 
     componentWillUnmount() {
-        console.log('WillUnmount: Justo antes de desaparecer')
+        console.log('WillUnmount')
     }
 
     render() {

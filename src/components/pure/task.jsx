@@ -1,11 +1,9 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 
-// Models
 import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enum';
 
-// Importamos la hoja de estilos de task.css
 import '../../styles/task.scss'
 
 

@@ -19,7 +19,6 @@ const unloggedStyle = {
     fontWeight: 'bold'
 }
 
-// Login / Logout buttons
 const LoginButton = ({loginAction, propStyle}) => {
     return (
         <button style={propStyle} onClick={loginAction}>Login</button>
@@ -31,9 +30,6 @@ const LogoutButton = ({logoutAction, propStyle}) => {
         <button style={propStyle} onClick={logoutAction}>Logout</button>
     )
 }
-
-// ? (Expresión true) && expresión => se renderiza la expresión
-// ? (Expresión false) && expresión => no se renderiza la expresión
 
 const OptionalRender = () => {
 

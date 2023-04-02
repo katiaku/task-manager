@@ -2,7 +2,7 @@ export class Contact {
     firstName = '';
     lastName = '';
     email = '';
-    isConnected = false
+    isConnected = false;
 
     constructor(firstName, lastName, email, isConnected){
         this.firstName = firstName;

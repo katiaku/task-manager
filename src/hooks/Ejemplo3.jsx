@@ -1,9 +1,3 @@
-/**
- * Ejemplo Hooks:
- * - useState()
- * - useContext()
- */
-
 import React, { useState, useContext } from 'react';
 
 /**

@@ -2,7 +2,6 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-// Models
 import { User } from '../../../models/user.class';
 import { ROLES } from '../../../models/roles.enum';
 
@@ -14,7 +13,7 @@ const RegisterFormik = () => {
         username: '',
         email: '',
         password: '',
-        confirm: '', // to confirm password
+        confirm: '',
         role: ROLES.USER
     }
 

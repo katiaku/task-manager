@@ -15,14 +15,14 @@ class Greeting extends Component {
         return (
             <div>
                 <h1>
-                    ¡HOLA { this.props.name } !
+                    Hello! { this.props.name } !
                 </h1>
                 <h2>
-                    Tu edad es de: { this.state.age }
+                    Your age: { this.state.age }
                 </h2>
                 <div>
                     <button onClick={this.birthday}>
-                        Cumplir años
+                        Add years
                     </button>
                 </div>
             </div>
@@ -36,13 +36,10 @@ class Greeting extends Component {
             }
         ))
     }
-
 }
-
 
 Greeting.propTypes = {
     name: PropTypes.string,
 };
-
 
 export default Greeting;

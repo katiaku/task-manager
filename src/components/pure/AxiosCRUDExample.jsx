@@ -125,7 +125,7 @@ const AxiosCRUDExample = () => {
                 }}
             >
 
-                {/* We obtain props from Formik */}
+                {/* Obtain props from Formik */}
 
                 {({ values, 
                     touched,
@@ -170,7 +170,7 @@ const AxiosCRUDExample = () => {
                     Get All Users (Page 1) with Axios
                 </button>
                 <button onClick={() => obtainUserByID(1)}>
-                    Get User 1
+                    Get User1
                 </button>
                 <button onClick={() => createNewUser('morpheus', 'leader')}>
                     Create User

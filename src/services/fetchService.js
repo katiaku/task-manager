@@ -5,7 +5,6 @@ export const getAllUsers = async () => {
     console.log('Status:', response.status);
     console.log('OK?', response.ok)
 
-    // We return the json
     return response.json()
 }
 
@@ -16,7 +15,6 @@ export const getAllPagedUsers = async (page) => {
     console.log('Status:', response.status);
     console.log('OK?', response.ok)
 
-    // We return the json
     return response.json()
 }
 
@@ -27,7 +25,6 @@ export const getUserDetails = async (id) => {
     console.log('Status:', response.status);
     console.log('OK?', response.ok)
 
-    // We return the json
     return response.json()
 }
 

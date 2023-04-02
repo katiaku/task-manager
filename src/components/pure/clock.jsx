@@ -6,8 +6,8 @@ const Clock = () => {
    const defaultState = {
       date: new Date(),
       age: 0,
-      firstname: 'Martín',
-      lastname: 'San José'
+      firstname: 'John',
+      lastname: 'Doe'
    };
 
    const [user, setUser] = useState(defaultState);

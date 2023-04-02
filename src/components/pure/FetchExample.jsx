@@ -23,7 +23,7 @@ const FetchExample = () => {
                 setPages(response.total_pages);
             })
             .catch((error) => {
-                alert(`Error while retreiving the users: ${error}`)
+                alert(`Error while retreiving users: ${error}`)
             })
             .finally(() => {
                 console.log('Ended obtaining users:');
@@ -41,7 +41,7 @@ const FetchExample = () => {
                 setPages(response.total_pages);
             })
             .catch((error) => {
-                alert(`Error while retreiving the users: ${error}`)
+                alert(`Error while retreiving users: ${error}`)
             })
             .finally(() => {
                 console.log('Ended obtaining users:');
@@ -56,7 +56,7 @@ const FetchExample = () => {
                 setSelectedUser(response.data);
             })
             .catch((error) => {
-                alert(`Error while retreiving the user: ${error}`)
+                alert(`Error while retreiving user: ${error}`)
             })
             .finally(() => {
                 console.log('Ended obtaining user:');
@@ -109,7 +109,7 @@ const FetchExample = () => {
                         <img alt='Avatar' src={selectedUser.avatar} style={{height: '150px', width: '150px'}} />
                     </div>
                 ):
-                ( <h6>Please click on a User to see its details</h6>)
+                ( <h6>Please click on a user to see the details</h6>)
                 }
             </div>
         </div>

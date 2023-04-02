@@ -71,10 +71,10 @@ function App() {
       {/* <FetchExample></FetchExample> */}
       {/* <AxiosExample></AxiosExample> */}
       {/* <RandomJoke></RandomJoke> */}
-      <AxiosCRUDExample></AxiosCRUDExample>
+      {/* <AxiosCRUDExample></AxiosCRUDExample> */}
 
       {/* PROYECTO FINAL */}
-      {/* <TaskListComponent></TaskListComponent> */}
+      <TaskListComponent></TaskListComponent>
     </div>
   );
 }

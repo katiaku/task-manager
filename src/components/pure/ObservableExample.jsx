@@ -7,7 +7,7 @@ const ObservableExample = () => {
 
     const obtainNewNumbers = () => {
 
-        console.log('Subscription to Observable');
+        console.log('Subscription to observable');
         getNumbers.subscribe(
             {
                 next(newNumber){

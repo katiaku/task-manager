@@ -5,11 +5,11 @@ const StatePage = () => {
 
     const location = useLocation();
 
-    console.log('Query Params:', location.search); // Query Params Sent
+    console.log('Query params:', location.search); // Query Params Sent
 
     return (
         <div>
-            <h1>State: {location.state.online ? 'The user is Online' : 'The user is Offline'}</h1>
+            <h1>State: {location.state.online ? 'The user is online' : 'The user is offline'}</h1>
         </div>
     );
 }

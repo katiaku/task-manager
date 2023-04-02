@@ -9,13 +9,9 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const Ejemplo2 = () => {
 
-    // Vamos a crear dos contadores distintos
-    // cada uno en un estado diferente
     const [contador1, setContador1] = useState(0);
     const [contador2, setcontador2] = useState(0);
 
-    // Vamos a crear una referencia con useRef() para asociar una variable
-    // con un elemento del DOM del componente (vista HTML)
     const miRef = useRef();
 
     function incrementar1(){

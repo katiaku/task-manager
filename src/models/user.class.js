@@ -4,7 +4,7 @@ export class User {
     username = '';
     email = '';
     password = '';
-    role = ROLES.USER
+    role = ROLES.USER;
 
     constructor(username, email, password, role){
         this.username = username;

@@ -30,7 +30,6 @@ const MenuListItems = ({list}) => {
             {list.map(({text, path, icon}, index) =>
                 (
                     <ListItem key={index} button onClick={() => navigateTo(path)}>
-
                         <ListItemIcon>
                             {getIcon(icon)}
                         </ListItemIcon>
@@ -41,7 +40,5 @@ const MenuListItems = ({list}) => {
                 )
             )}
         </List>
-
     )
-
 }
