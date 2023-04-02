@@ -5,13 +5,12 @@ import TaskComponent from '../pure/task';
 
 import '../../styles/task.scss';
 import TaskForm from '../pure/forms/taskForm';
-import { flexbox } from '@mui/system';
 
 const TaskListComponent = () => {
 
-    const defaultTask1 = new Task('Example1', 'Description1', true, LEVELS.NORMAL);
-    const defaultTask2 = new Task('Example2', 'Description2', false, LEVELS.URGENT);
-    const defaultTask3 = new Task('Example3', 'Description3', false, LEVELS.BLOCKING);
+    const defaultTask1 = new Task('Example1', 'Description1', true, LEVELS.LOW);
+    const defaultTask2 = new Task('Example2', 'Description2', false, LEVELS.MEDIUM);
+    const defaultTask3 = new Task('Example3', 'Description3', false, LEVELS.HIGH);
 
     const [tasks, setTasks] = useState([defaultTask1, defaultTask2, defaultTask3]);
     const [loading, setLoading] = useState(true);
@@ -84,7 +83,7 @@ const TaskListComponent = () => {
     }else{
         tasksTable = (
         <div>
-            <h3>No tasks to show</h3>
+            <h3 className="mt-5" >No tasks to show</h3>
             <h4>Please, create a task</h4>
         </div>
         )
@@ -98,9 +97,9 @@ const TaskListComponent = () => {
 
     return (
         <div className='my-3'>
-            <div className='col-12'>
-                <div className='card'>
-                    <div className='card-header p-3' style={{'background-color': 'rgb(25,135,83)', 'color': 'white' }}>
+            <div className='col-12' >
+                <div className='card border border-2 rounded-3 border-success '>
+                    <div className='card-header pt-3' style={{'background-color': 'rgb(25,135,83)', 'color': 'white' }}>
                         <h5>
                             Welcome to Task Manager!
                         </h5>
@@ -108,10 +107,18 @@ const TaskListComponent = () => {
                             Your Tasks:
                         </h5>
                     </div>
-                    <div 
+                    <div
                         className='card-body' data-mdb-perfect-scrollbar='true' 
                         style={ {position: 'relative', height: '400px', overflow: 'scroll'}}>
-                            {loading ? (<p style={loadingStyle}>Loading...</p>) : tasksTable}
+                            {loading ? 
+                                (
+                                    <div className="mt-5">
+                                        <p style={loadingStyle}>Loading...</p>
+                                        <div className="spinner-grow text-success" role="status"></div> 
+                                    </div>   
+                                ) 
+                            : tasksTable
+                            }
                     </div>
                 </div>
             </div>

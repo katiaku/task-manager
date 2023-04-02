@@ -22,7 +22,7 @@ const TaskComponent = ({ task, complete, remove }) => {
      */
     function taskLevelBadge(){
         switch (task.level) {
-            case LEVELS.NORMAL:
+            case LEVELS.LOW:
                 return(
                     <h6 className='mb-0'>
                         <span className='badge bg-primary'>
@@ -30,7 +30,7 @@ const TaskComponent = ({ task, complete, remove }) => {
                         </span>
                     </h6>
                 )
-            case LEVELS.URGENT:
+            case LEVELS.MEDIUM:
                 return(
                     <h6 className='mb-0'>
                         <span className='badge bg-warning'>
@@ -38,7 +38,7 @@ const TaskComponent = ({ task, complete, remove }) => {
                         </span>
                     </h6>
                 )
-            case LEVELS.BLOCKING:
+            case LEVELS.HIGH:
                 return(
                     <h6 className='mb-0'>
                         <span className='badge bg-danger'>

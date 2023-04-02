@@ -37,3 +37,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the project in your 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 For more information check out the [React documentation](https://reactjs.org/).
+
+<img src="./src/media/pictures/Your tasks.png" alt="Task manager" width="100" height="300">
+<img src="./src/media/pictures/Loading" alt="Loading"  width="100" height="300">
+<img src="./src/media/pictures/No tasks.png" alt="No tasks"  width="100" height="300">

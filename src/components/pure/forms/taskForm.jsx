@@ -7,7 +7,7 @@ const TaskForm = ({add, length}) => {
 
     const nameRef = useRef('');
     const descriptionRef = useRef('');
-    const levelRef = useRef(LEVELS.NORMAL);
+    const levelRef = useRef(LEVELS.LOW);
 
     function addTask(e){
         e.preventDefault();
@@ -24,16 +24,16 @@ const TaskForm = ({add, length}) => {
         <form onSubmit={addTask} className='d-flex justify-content-center align-items-center mt-2 mb-4'>
             <div className='form-outline flex-fill'>
                 <input ref={nameRef} id='inputName' type='text' className='form-control form-control-md' required autoFocus placeholder='Task title'/>
-                <input ref={descriptionRef} id='inputDescription' type='text' className='form-control form-control-md my-2' required placeholder='Task description'/>
+                <input ref={descriptionRef} id='inputDescription' type='text' className='form-control form-control-md my-2' placeholder='Task description'/>
                 <span className='mx-3'>Task priority </span>
-                <select className='custom-select' ref={levelRef} defaultValue={LEVELS.NORMAL} is='selectLevel'>
-                    <option value={LEVELS.NORMAL}>
+                <select className='custom-select' ref={levelRef} defaultValue={LEVELS.LOW} is='selectLevel'>
+                    <option value={LEVELS.LOW}>
                         Low
                     </option>
-                    <option value={LEVELS.URGENT}>
+                    <option value={LEVELS.MEDIUM}>
                         Medium
                     </option>
-                    <option value={LEVELS.BLOCKING}>
+                    <option value={LEVELS.HIGH}>
                         High
                     </option>
                 </select>
