@@ -21,23 +21,24 @@ const TaskForm = ({add, length}) => {
     }
 
     return (
-        <form onSubmit={addTask} className='d-flex justify-content-center align-items-center mb-4'>
+        <form onSubmit={addTask} className='d-flex justify-content-center align-items-center mt-2 mb-4'>
             <div className='form-outline flex-fill'>
-                <input ref={nameRef} id='inputName' type='text' className='form-control form-control-lg' required autoFocus placeholder='Task Name'/>
-                <input ref={descriptionRef} id='inputDescription' type='text' className='form-control form-control-lg' required placeholder='Task description'/>
-                <select className='form-control form-control-lg' ref={levelRef} defaultValue={LEVELS.NORMAL} is='selectLevel'>
+                <input ref={nameRef} id='inputName' type='text' className='form-control form-control-md' required autoFocus placeholder='Task title'/>
+                <input ref={descriptionRef} id='inputDescription' type='text' className='form-control form-control-md my-2' required placeholder='Task description'/>
+                <span className='mx-3'>Task priority </span>
+                <select className='custom-select' ref={levelRef} defaultValue={LEVELS.NORMAL} is='selectLevel'>
                     <option value={LEVELS.NORMAL}>
-                        Normal
+                        Low
                     </option>
                     <option value={LEVELS.URGENT}>
-                        Urgent
+                        Medium
                     </option>
                     <option value={LEVELS.BLOCKING}>
-                        Blocking
+                        High
                     </option>
                 </select>
-                <button type='submit' className='btn btn-success btn-lg ms-2'>
-                    {length > 0 ? 'Add a new task' : 'Create your first task'}
+                <button type='submit' className='btn btn-success btn-md my-2 w-100'>
+                    {length > 0 ? 'Add task' : 'Create your first task'}
                 </button>
             </div>
         </form>

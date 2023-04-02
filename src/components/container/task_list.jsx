@@ -5,6 +5,7 @@ import TaskComponent from '../pure/task';
 
 import '../../styles/task.scss';
 import TaskForm from '../pure/forms/taskForm';
+import { flexbox } from '@mui/system';
 
 const TaskListComponent = () => {
 
@@ -15,7 +16,6 @@ const TaskListComponent = () => {
     const [tasks, setTasks] = useState([defaultTask1, defaultTask2, defaultTask3]);
     const [loading, setLoading] = useState(true);
 
-    // Control del ciclo de vida del componente
     useEffect(() => {
         console.log('Task state has been modified');
         setTimeout(() => {
@@ -97,28 +97,25 @@ const TaskListComponent = () => {
     }
 
     return (
-        <div>
+        <div className='my-3'>
             <div className='col-12'>
                 <div className='card'>
-                    {/* Card Header (title) */}
-                    <div className='card-header p-3'>
+                    <div className='card-header p-3' style={{'background-color': 'rgb(25,135,83)', 'color': 'white' }}>
+                        <h5>
+                            Welcome to Task Manager!
+                        </h5>
                         <h5>
                             Your Tasks:
                         </h5>
                     </div>
-                    {/* Card Body (content) */}
-                    <div className='card-body' data-mdb-perfect-scrollbar='true' style={ {position: 'relative', height: '400px'}}>
-                        {/* TODO Add Loading Spinner */}
+                    <div className='card-body' data-mdb-perfect-scrollbar='true' style={ {position: 'relative', height: '400px', overflow: 'scroll'}}>
                         {loading ? (<p style={loadingStyle}>Loading...</p>) : tasksTable}
                     </div>
                 </div>
-                {/* <h1>Your Tasks:</h1> */}
             </div>
-            {/* <TaskComponent task={defaultTask}></TaskComponent> */}
             <TaskForm add={addTask} length={tasks.length}></TaskForm>
         </div>
     );
 };
-
 
 export default TaskListComponent;
