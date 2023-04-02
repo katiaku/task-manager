@@ -1,6 +1,9 @@
 # Task Manager React App
 
-This project was built for OpenBootcamp React Course 
+This project was built for OpenBootcamp React Course
+
+It is possible to include optional functionalities 
+such as login and random joke
 
 ## Getting Started
 
@@ -14,10 +17,9 @@ cd task_manager
 npm start
 ```
 
-Install dependencies
+Install necessary dependencies
 ```
-npm install bootstrap 
-npm install bootstrap-icons
+npm install bootstrap bootstrap-icons
 npm install node-sass
 npm install axios
 npm install formik yup
