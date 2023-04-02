@@ -1,5 +1,11 @@
 # Task Manager React App
 
+<div>
+    <img src="./src/media/pictures/Your tasks.png" alt="Task manager" width="200" height="300">
+    <img src="./src/media/pictures/Loading.png" alt="Loading"  width="150" height="300">
+    <img src="./src/media/pictures/No tasks.png" alt="No tasks"  width="150" height="300">
+</div>
+
 This project was built for OpenBootcamp React Course
 
 It is possible to include optional functionalities 
@@ -37,9 +43,3 @@ Open [http://localhost:3000](http://localhost:3000) to view the project in your 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 For more information check out the [React documentation](https://reactjs.org/).
-
-<div>
-    <img src="./src/media/pictures/Your tasks.png" alt="Task manager" width="150" height="300">
-    <img src="./src/media/pictures/Loading.png" alt="Loading"  width="150" height="300">
-    <img src="./src/media/pictures/No tasks.png" alt="No tasks"  width="150" height="300">
-</div>
