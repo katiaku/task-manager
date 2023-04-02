@@ -18,7 +18,7 @@ const Componente1 = () => {
     return (
         <div>
             <h1>
-                El Token es: {state.token}
+                Token: {state.token}
             </h1>
             <Componente2></Componente2>
         </div>
@@ -32,7 +32,7 @@ const Componente2 = () => {
     return (
         <div>
             <h2>
-                La sesión es: {state.sesion}
+                Session: {state.sesion}
             </h2>
         </div>
     );
@@ -45,7 +45,6 @@ export default function MiComponenteConContexto() {
         sesion: 1
     }
 
-    // Creamos el estado de este componente
     const [sessionData, setSessionData] = useState(estadoInicial);
 
     function actualizarSesion(){

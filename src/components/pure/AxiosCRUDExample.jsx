@@ -38,7 +38,6 @@ const AxiosCRUDExample = () => {
             .finally(() => console.log('Login done'))
     }
 
-    //CRUD Examples
     const obtainAllUsers = () => {
         getAllUsers()
             .then((response) => {
@@ -57,7 +56,7 @@ const AxiosCRUDExample = () => {
                 if(response.data.data && response.status === 200){
                     alert(JSON.stringify(response.data.data))
                 }else{
-                    throw new Error(`No users found in page ${page}`)
+                    throw new Error(`No users found on page ${page}`)
                 }
             })
             .catch((error) => alert(`Something went wrong: ${error}`))
@@ -115,11 +114,9 @@ const AxiosCRUDExample = () => {
         <div>
             <h4>Login Formik</h4>
             <Formik
-                // *** Initial values that the form will take
                 initialValues = { initialCredentials }
                 // *** Yup Validation Schema ***
                 validationSchema = {loginSchema}
-                // ** onSubmit Event
                 onSubmit={async (values) => {
                     authUser(values)
                 }}

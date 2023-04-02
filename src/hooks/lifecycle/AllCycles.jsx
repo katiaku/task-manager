@@ -3,16 +3,16 @@ import React, { useEffect } from 'react';
 const AllCycles = () => {
 
     useEffect(() => {
-        console.log('Componente creado')
+        console.log('Component created')
 
         const intervalID = setInterval(() => {
             document.title = `${new Date()}`
-            console.log('Actualizacion del componente')
+            console.log('Component update')
         }, 1000);
 
         return () => {
-            console.log('Componente va a desaparecer');
-            document.title = "Tiempo detenido";
+            console.log('Component will disappear');
+            document.title = "Time stopped";
             clearInterval(intervalID);
         }
     }, []);

@@ -108,8 +108,10 @@ const TaskListComponent = () => {
                             Your Tasks:
                         </h5>
                     </div>
-                    <div className='card-body' data-mdb-perfect-scrollbar='true' style={ {position: 'relative', height: '400px', overflow: 'scroll'}}>
-                        {loading ? (<p style={loadingStyle}>Loading...</p>) : tasksTable}
+                    <div 
+                        className='card-body' data-mdb-perfect-scrollbar='true' 
+                        style={ {position: 'relative', height: '400px', overflow: 'scroll'}}>
+                            {loading ? (<p style={loadingStyle}>Loading...</p>) : tasksTable}
                     </div>
                 </div>
             </div>

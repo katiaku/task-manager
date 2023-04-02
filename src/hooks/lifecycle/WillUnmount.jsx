@@ -9,7 +9,7 @@ import React, { Component, useEffect } from 'react';
 export class WillUnmount extends Component {
 
     componentWillUnmount(){
-        console.log('Comportamiento antes de que el componente desaparezca')
+        console.log('Before disappear')
     }
 
     render() {
@@ -27,7 +27,7 @@ export const WillUnmountHook = () => {
 
     useEffect(() => {
         return () => {
-            console.log('Comportamiento antes de que el componente desaparezca')
+            console.log('Before disappear')
         };
     }, []);
 

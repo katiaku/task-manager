@@ -50,13 +50,13 @@ const Ejemplo1 = () => {
 
     return (
         <div>
-            <h1>*** Ejemplo de useState() ***</h1>
-            <h2>CONTADOR: {contador}</h2>
-            <h2>DATOS DE LA PERSONA</h2>
-            <h3>NOMBRE: {persona.nombre}</h3>
+            <h1>*** UseState() Example ***</h1>
+            <h2>COUNT: {contador}</h2>
+            <h2>PERSONAL DATA</h2>
+            <h3>NAME: {persona.nombre}</h3>
             <h4>EMAIL: {persona.email}</h4>
-            <button onClick={incrementarContador}>Incrementar contador</button>
-            <button onClick={actualizarPersona}>Actualizar persona</button>
+            <button onClick={incrementarContador}>Increment counter</button>
+            <button onClick={actualizarPersona}>Actualize personal data</button>
         </div>
     );
 }

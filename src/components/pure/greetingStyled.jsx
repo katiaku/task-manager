@@ -24,7 +24,7 @@ const GreetingStyled = (props) => {
                 pleaseLogin()
             }
             <button onClick={() => {
-                console.log('Botón pulsado');
+                console.log('Button pressed');
                 setLogged(!logged);
             }}>
                 { logged ? 'Logout' : 'Login'}

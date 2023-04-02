@@ -54,7 +54,6 @@ const RandomJoke = () => {
                     }}
                     variant="outlined"
                 >
-                    <img alt="Chuck Norris" src={joke.icon_url} />
                     {joke.value}
                     <div style={{display: 'flex'}}>
                         <div style={{ display: 'flex', flexDirection: 'column', margin: '5px', alignItems: 'center' }}>
@@ -69,7 +68,7 @@ const RandomJoke = () => {
                     </div>
                 </Card>
             ) : (
-                <Button onClick={refreshQuote}>Get a Joke!</Button>
+                <Button onClick={refreshQuote}>Get a joke!</Button>
             )}
         </div>
     );

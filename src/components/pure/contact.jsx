@@ -8,7 +8,7 @@ import '../../styles/contact.scss'
 const ContactComponent = ({ contact, add, remove }) => {
 
     useEffect(() => {
-        console.log('Contact Created')
+        console.log('Contact created')
         return () => {
             console.log(`Contact: ${contact.name} is going to unmount`);
         };

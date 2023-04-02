@@ -7,7 +7,7 @@ const Child = ({ name, send, update }) => {
 
     function pressButton(){
         const text = messageRef.current.value;
-        alert(`text in Input: ${text}`);
+        alert(`Text in input: ${text}`);
     }
 
     function pressButtonParams(text){
@@ -34,8 +34,8 @@ const Child = ({ name, send, update }) => {
                 Button 3
             </button>
             <input 
-                placeholder = 'Send a text to your father'
-                onFocus={() => console.log('Input Focused')}
+                placeholder = 'Send a text to the father'
+                onFocus={() => console.log('Input focused')}
                 onChange={(e) => console.log('Input changed:', e.target.value)}
                 onCopy={() => console.log('Copied text from input')}
                 ref = {messageRef}

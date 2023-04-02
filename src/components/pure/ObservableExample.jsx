@@ -11,7 +11,7 @@ const ObservableExample = () => {
         getNumbers.subscribe(
             {
                 next(newNumber){
-                    console.log('New Number:', newNumber);
+                    console.log('New number:', newNumber);
                     setNumber(newNumber);
                 },
                 error(error){

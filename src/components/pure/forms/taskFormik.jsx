@@ -9,7 +9,7 @@ const TaskFormik = () => {
 
     const defaultTask = {
         name: 'Formik',
-        description: 'Formulario con Formik',
+        description: 'Form using Formik',
         level: LEVELS.URGENT,
         done: false,
     };
@@ -61,7 +61,7 @@ const TaskFormik = () => {
                     handleBlur }) => (
                         <Form>
                             <label htmlFor="name">Task Name</label>
-                            <Field id="name" type="text" name="name" placeholder="Your task name" />
+                            <Field id="name" type="text" name="name" placeholder="Task name" />
                             {
                                 errors.name && touched.name && 
                                 (
@@ -92,7 +92,7 @@ const TaskFormik = () => {
             }
             </Formik>
             {tasks.isEmpty() ? (
-                <p>Task List is Empty</p>
+                <p>Task list is empty</p>
             ) : (
                 tasks.value.map((task, index) => (
                     <li key={index} style={{ display: 'flex', alignItems: 'center' }}>

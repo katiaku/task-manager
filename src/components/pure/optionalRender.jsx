@@ -69,13 +69,11 @@ const OptionalRender = () => {
 
     return (
         <div>
-            {/* Optional Button */}
             { optionalButton }
             {/* N Messages unread */}
             {/* { nMessages > 0 && nMessages === 1 && <p>You have {nMessages} new messages...</p> }
             { nMessages > 1 && <p>You have {nMessages} new messages...</p> }
             { nMessages === 0 && <p>There are no new messages</p>} */}
-            {/* Ternary Operator */}
             {access ? (
                 <div>
                     { nMessages > 0 ? 

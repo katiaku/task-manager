@@ -1,8 +1,3 @@
-/**
- * Ejemplo de componente tipo clase que dispone de los
- * métodos de ciclo de vida
- */
-
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
