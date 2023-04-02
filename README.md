@@ -38,6 +38,8 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 For more information check out the [React documentation](https://reactjs.org/).
 
-<img src="./src/media/pictures/Your tasks.png" alt="Task manager" width="100" height="300">
-<img src="./src/media/pictures/Loading" alt="Loading"  width="100" height="300">
-<img src="./src/media/pictures/No tasks.png" alt="No tasks"  width="100" height="300">
+<div>
+    <img src="./src/media/pictures/Your tasks.png" alt="Task manager" width="150" height="300">
+    <img src="./src/media/pictures/Loading.png" alt="Loading"  width="150" height="300">
+    <img src="./src/media/pictures/No tasks.png" alt="No tasks"  width="150" height="300">
+</div>
