@@ -5,9 +5,9 @@ Users can add new tasks to the list, edit or remove existing tasks. Each task in
 a priority level that indicates its relative importance or urgency.
 
 <div>
-    <img src="./src/media/pictures/Your tasks.png" alt="Task manager" width="200" height="300">
-    <img src="./src/media/pictures/Loading.png" alt="Loading"  width="150" height="300">
-    <img src="./src/media/pictures/No tasks.png" alt="No tasks"  width="150" height="300">
+    <img src="./src/media/pictures/your tasks.png" alt="Task manager" width="200" height="300">
+    <img src="./src/media/pictures/loading.png" alt="Loading"  width="150" height="300">
+    <img src="./src/media/pictures/no tasks.png" alt="No tasks"  width="150" height="300">
 </div>
 <br>
 This project was built for OpenBootcamp React Course

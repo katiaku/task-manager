@@ -37,7 +37,7 @@ const TaskForm = ({add, length}) => {
                         High
                     </option>
                 </select>
-                <button type='submit' className='btn btn-success btn-md my-2 w-100'>
+                <button type='submit' className='btn btn-primary text-light btn-md my-2 w-100'>
                     {length > 0 ? 'Add task' : 'Create your first task'}
                 </button>
             </div>

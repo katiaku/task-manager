@@ -83,8 +83,8 @@ const TaskListComponent = () => {
     }else{
         tasksTable = (
         <div>
-            <h3 className="mt-5" >No tasks to show</h3>
-            <h4>Please, create a task</h4>
+            <h3 className="mt-5 text-secondary">No tasks to show</h3>
+            <h4 className="text-secondary">Please, create a task</h4>
         </div>
         )
     }
@@ -98,8 +98,8 @@ const TaskListComponent = () => {
     return (
         <div className='my-3'>
             <div className='col-12' >
-                <div className='card border border-2 rounded-3 border-success '>
-                    <div className='card-header pt-3' style={{'background-color': 'rgb(25,135,83)', 'color': 'white' }}>
+                <div className='card border border-1 rounded-3 border-primary'>
+                    <div className='card-header pt-3 bg-primary text-light'>
                         <h5>
                             Welcome to Task Manager!
                         </h5>
@@ -109,12 +109,12 @@ const TaskListComponent = () => {
                     </div>
                     <div
                         className='card-body' data-mdb-perfect-scrollbar='true' 
-                        style={ {position: 'relative', height: '400px', overflow: 'scroll'}}>
+                        style={{position: 'relative', height: '400px', overflow: 'scroll'}}>
                             {loading ? 
                                 (
                                     <div className="mt-5">
                                         <p style={loadingStyle}>Loading...</p>
-                                        <div className="spinner-grow text-success" role="status"></div> 
+                                        <div className="spinner-grow text-info" role="status"></div> 
                                     </div>   
                                 ) 
                             : tasksTable
