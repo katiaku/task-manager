@@ -4,6 +4,12 @@ The Task Manager React App is a web application that allows users to manage thei
 Users can add new tasks to the list, edit or remove existing tasks. Each task in the app includes a description and 
 a priority level that indicates its relative importance or urgency.
 
+<div>
+    <img src="./src/media/pictures/your_tasks.png" alt="Task manager" width="200" height="300">
+    <img src="./src/media/pictures/loading.png" alt="Loading"  width="150" height="300">
+    <img src="./src/media/pictures/no_tasks.png" alt="No tasks"  width="150" height="300">
+</div>
+<br>
 This project was built for OpenBootcamp React Course
 
 It is possible to include optional functionalities such as login and random joke
